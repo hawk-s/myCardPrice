@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Advent of Arceus",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Advent-of-Arceus?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Boundaries Crossed",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Boundaries-Crossed?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Brilliant Stars",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Brilliant-Stars?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Neo Discovery",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Neo-Discovery?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Obsidian Flames",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Obsidian-Flames?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Rebel Clash",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Rebel-Clash?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Rising Rivals",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Rising-Rivals?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Secret Wonders",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Secret-Wonders?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Shining Legends JP",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Shining-Legends-JP?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Silver Deck Kit",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Silver-Deck-Kit?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Sky Legend",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Sky-Legend?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Sun & Moon",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Sun-Moon?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  },
+  {
+    "name": "Trick or Trade",
+    "link": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Trick-or-Trade?idRarity=0&perSite=20",
+    "error": "Waiting for selector `div.table-body` failed: Waiting failed: 10000ms exceeded"
+  }
+]
