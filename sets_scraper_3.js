@@ -100,7 +100,7 @@ async function fetchAndSaveConsolidatedHTML(sets, outputFolder, errorLinksFilePa
 // Example usage
 (async () => {
     const jsonFilePath = path.join(__dirname, 'corrected_pokemon_sets.json'); // Path to your JSON file
-    const outputFolder = path.join(__dirname, 'html_files_3'); // Folder to save consolidated HTML files
+    const outputFolder = path.join(__dirname, 'html_files_4'); // Folder to save consolidated HTML files
     const errorLinksFilePath = path.join(__dirname, 'error_links_sets.json'); // Path to save error links
 
     // Load the JSON file and parse it
