@@ -9,13 +9,20 @@ puppeteer.use(StealthPlugin());
 /**
  * Fetch HTML from paginated links by clicking the "Next page" button
  * and save consolidated HTML for each set.
+ * Failed links are logged to a separate JSON file for later handling continuously.
  * @param {Array<Object>} sets - Array of objects containing set names and links.
  * @param {string} outputFolder - Path to the folder where consolidated HTML files will be saved.
+ * @param {string} errorLinksFilePath - Path to the JSON file for storing failed links.
  */
-async function fetchAndSaveConsolidatedHTML(sets, outputFolder) {
+async function fetchAndSaveConsolidatedHTML(sets, outputFolder, errorLinksFilePath) {
     // Ensure the output folder exists
     if (!fs.existsSync(outputFolder)) {
         fs.mkdirSync(outputFolder, { recursive: true });
+    }
+
+    // Initialize error file if it doesn't exist
+    if (!fs.existsSync(errorLinksFilePath)) {
+        fs.writeFileSync(errorLinksFilePath, JSON.stringify([], null, 2), 'utf-8');
     }
 
     const browser = await puppeteer.launch({ headless: false }); // Set headless: true to run without a browser UI
@@ -77,6 +84,12 @@ async function fetchAndSaveConsolidatedHTML(sets, outputFolder) {
             console.log(`Consolidated HTML saved for ${name} at ${filePath}`);
         } catch (error) {
             console.error(`Failed to fetch ${set.name}:`, error.message);
+
+            // Continuously write error links to the JSON file
+            const errorLinks = JSON.parse(fs.readFileSync(errorLinksFilePath, 'utf-8'));
+            errorLinks.push({ name: set.name, link: set.link, error: error.message });
+            fs.writeFileSync(errorLinksFilePath, JSON.stringify(errorLinks, null, 2), 'utf-8');
+            console.log(`Error logged for ${set.name}`);
         }
     }
 
@@ -86,12 +99,13 @@ async function fetchAndSaveConsolidatedHTML(sets, outputFolder) {
 
 // Example usage
 (async () => {
-    const jsonFilePath = path.join(__dirname, 'pokemon_sets.json'); // Path to your JSON file
+    const jsonFilePath = path.join(__dirname, 'corrected_pokemon_sets.json'); // Path to your JSON file
     const outputFolder = path.join(__dirname, 'html_files_3'); // Folder to save consolidated HTML files
+    const errorLinksFilePath = path.join(__dirname, 'error_links_sets.json'); // Path to save error links
 
     // Load the JSON file and parse it
     const sets = JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));
 
     // Fetch and save consolidated HTML for each set
-    await fetchAndSaveConsolidatedHTML(sets, outputFolder);
+    await fetchAndSaveConsolidatedHTML(sets, outputFolder, errorLinksFilePath);
 })();
