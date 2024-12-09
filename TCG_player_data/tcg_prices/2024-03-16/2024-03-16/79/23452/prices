@@ -1,0 +1,1 @@
+{"success": true, "errors": [], "results": [{"productId": 542130, "lowPrice": 0.99, "midPrice": 3.0, "highPrice": 5.0, "marketPrice": 1.23, "directLowPrice": null, "subTypeName": "Normal"}, {"productId": 542131, "lowPrice": 1.0, "midPrice": 3.0, "highPrice": 5.0, "marketPrice": 1.26, "directLowPrice": null, "subTypeName": "Normal"}]}
